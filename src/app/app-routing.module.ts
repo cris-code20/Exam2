@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'manejador',
+    loadChildren: () => import('./manejador/manejador.module').then( m => m.ManejadorPageModule)
+  },
+  {
+    path: 'listado',
+    loadChildren: () => import('./listado/listado.module').then( m => m.ListadoPageModule)
+  },
 ];
 
 @NgModule({
